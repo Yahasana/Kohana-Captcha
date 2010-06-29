@@ -18,8 +18,7 @@ class Captcha {
     protected $driver;
 
     // Config values
-    public static $config = array
-    (
+    public static $config = array(
         'style'      => 'basic',
         'width'      => 150,
         'height'     => 50,
@@ -104,7 +103,7 @@ class Captcha {
             Captcha::$config['background'] = str_replace('\\', '/', realpath($config['background']));
 
             if ( ! is_file(Captcha::$config['background']))
-                throw new Kohana_Exception('captcha.file_not_found', Captcha::$config['background']);
+                throw new Kohana_Exception('Captcha background file ":file" not found', array('file' => Captcha::$config['background']));
         }
 
         // If using any fonts, check if they exist
@@ -115,25 +114,15 @@ class Captcha {
             foreach ($config['fonts'] as $font)
             {
                 if ( ! is_file(Captcha::$config['fontpath'].$font))
-                    throw new Kohana_Exception('captcha.file_not_found', Captcha::$config['fontpath'].$font);
+                    throw new Kohana_Exception('Captcha font file ":file" not found', array('file' => Captcha::$config['fontpath'].$font));
             }
         }
 
         // Set driver name
-        $driver = 'Captcha'.'_Driver_'.ucfirst($config['style']);
-
-        // Load the driver
-        if ( ! Kohana::auto_load($driver))
-            throw new Kohana_Exception('core.driver_not_found', $config['style'], get_class($this));
+        $driver = 'Captcha_Driver_'.ucfirst($config['style']);
 
         // Initialize the driver
         $this->driver = new $driver;
-
-        // Validate the driver
-        if ( ! ($this->driver instanceof Captcha_Driver))
-            throw new Kohana_Exception('core.driver_implements', $config['style'], get_class($this), 'Captcha_Driver');
-
-        // Kohana::$log->add('debug', 'Captcha Library initialized');
     }
 
     /**

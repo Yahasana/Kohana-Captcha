@@ -25,7 +25,7 @@ return array
         'complexity' => 4,
         'background' => '',
         'fontpath'   => APPPATH.'fonts/',
-        'fonts'      => array('KINGASN_.TTF','Zapped Sticks.ttf','Wesley__.ttf'),
+        'fonts'      => array('DejaVuSerif.ttf'),
         'promote'    => FALSE,
     ),
     
@@ -36,7 +36,7 @@ return array
         'complexity' => 4,
         'background' => '',
         'fontpath'   => APPPATH.'fonts/',
-        'fonts'      => array('KINGASN_.TTF','Zapped Sticks.ttf','Wesley__.ttf'),
+        'fonts'      => array('DejaVuSerif.ttf'),
         'promote'    => FALSE,
     ),
     
@@ -47,40 +47,25 @@ return array
         'complexity' => 4,
         'background' => '',
         'fontpath'   => APPPATH.'fonts/',
-        'fonts'      => array('KINGASN_.TTF','Zapped Sticks.ttf','Wesley__.ttf'),
+        'fonts'      => array('DejaVuSerif.ttf'),
         'promote'    => FALSE,
     ),
     
     'math'   => array(
         'style'      => 'math',
-        'width'      => 158,
-        'height'     => 50,
         'complexity' => 4,
-        'background' => '',
-        'fontpath'   => APPPATH.'fonts/',
-        'fonts'      => array('KINGASN_.TTF','Zapped Sticks.ttf','Wesley__.ttf'),
         'promote'    => FALSE,
     ),
     
     'riddle'   => array(
         'style'      => 'riddle',
-        'width'      => 158,
-        'height'     => 50,
         'complexity' => 4,
-        'background' => '',
-        'fontpath'   => APPPATH.'fonts/',
-        'fonts'      => array('KINGASN_.TTF','Zapped Sticks.ttf','Wesley__.ttf'),
         'promote'    => FALSE,
     ),
     
     'word'   => array(
         'style'      => 'word',
-        'width'      => 158,
-        'height'     => 50,
         'complexity' => 4,
-        'background' => '',
-        'fontpath'   => APPPATH.'fonts/',
-        'fonts'      => array('KINGASN_.TTF','Zapped Sticks.ttf','Wesley__.ttf'),
         'promote'    => FALSE,
     ),
     
