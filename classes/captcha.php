@@ -63,7 +63,7 @@ class Captcha {
     public function __construct($group = NULL)
     {
         // Create a singleton instance once
-        empty(Captcha::$instance) and Captcha::$instance = $this;
+        empty(Captcha::$instance) AND Captcha::$instance = $this;
 
         // No config group name given
         if ( ! is_string($group))
@@ -76,13 +76,6 @@ class Captcha {
         {
             $config = Kohana::config('captcha.default');
             $group  = 'default';
-        }
-
-        // All captcha config groups inherit default config group
-        if ($group !== 'default')
-        {
-            // Merge config group with default config group
-            $config += Kohana::config('captcha.default');
         }
 
         // Assign config values to the object

@@ -67,6 +67,8 @@ return array
         'style'      => 'word',
         'complexity' => 4,
         'promote'    => FALSE,
+        'fontpath'   => APPPATH.'fonts/',
+        'fonts'      => array('DejaVuSerif.ttf'),
     ),
     
     /**
